@@ -15,22 +15,3 @@ def multiply_matrices(A, B):
                 result[i][j] += A[i][k] * B[k][j]
     
     return result
-
-
-# Example usage
-A = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-
-B = [
-    [7, 8],
-    [9, 10],
-    [11, 12]
-]
-
-result = multiply_matrices(A, B)
-
-print("Result of Matrix Multiplication:")
-for row in result:
-    print(row)
