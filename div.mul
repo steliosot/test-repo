@@ -1,0 +1,30 @@
+import numpy as np
+
+def divide_matrices(A, B):
+    # Convert to numpy arrays
+    A = np.array(A, dtype=float)
+    B = np.array(B, dtype=float)
+
+    # Check if B is square
+    if B.shape[0] != B.shape[1]:
+        raise ValueError("Matrix B must be square for division (inverse exists only for square matrices).")
+
+    # Check if B is invertible
+    if np.linalg.det(B) == 0:
+        raise ValueError("Matrix B is not invertible, cannot divide.")
+
+    # Compute division as A * B^-1
+    return np.dot(A, np.linalg.inv(B))
+
+
+# Example
+A = [[4, 8],
+     [2, 6]]
+
+B = [[1, 2],
+     [3, 4]]
+
+result = divide_matrices(A, B)
+
+print("Result of A ÷ B (A * B^-1):")
+print(result)
