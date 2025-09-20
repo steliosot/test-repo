@@ -15,3 +15,7 @@ def multiply_matrices(A, B):
                 result[i][j] += A[i][k] * B[k][j]
     
     return result
+
+
+
+
