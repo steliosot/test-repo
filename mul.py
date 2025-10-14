@@ -14,4 +14,4 @@ def multiply_matrices(A, B):
             for k in range(len(B)):  # rows of B / columns of A
                 result[i][j] += A[i][k] * B[k][j]
     
-    return result
+    return result 
